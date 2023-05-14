@@ -30,6 +30,8 @@ const PromptCard = ({post, handleTagCLick, handleEdit, handleDelete}) => {
    const handleUserProfile = async ( userProfile)=>{
       router.push(`/profile/${userProfile._id}?user=${userProfile.username}`)
    }
+
+  
   return (
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
@@ -49,7 +51,7 @@ const PromptCard = ({post, handleTagCLick, handleEdit, handleDelete}) => {
 
            }}>
             <h3 className="	font-satoshi font-semibold  text-gray-900">{post.creator.username}</h3>
-            <p className="font-inter font-sm text-gray-500">{post.creator.email}</p>
+            <p className="font-inter font-sm text-gray-500">{post.creator.email.replace(/^(.{2})[^@]+/, "$1****")}</p>
            </div>
         </div>
 
