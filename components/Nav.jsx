@@ -25,7 +25,7 @@ const Nav = () => {
     const [toggleDropdown, setToggleDropdown] = useState (false);
   return (
     <nav className="flex-between w-full mb-16 pt-5">
-        <Link href="/" className="flex gap-2 flex-center" >
+        <Link href="/"   className="flex gap-2 flex-center" replace>
             <Image src="/images/logo.svg"
             alt="Promptia Logo" 
             width={30} 
