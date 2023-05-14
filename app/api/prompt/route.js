@@ -14,8 +14,7 @@ export const  GET = async (req) => {
        const prompts = await Prompt.find({}).populate("creator")
 
        
-       return NextResponse.json(prompts,{status:200});
-
+       return new Response(JSON.stringify(),{status: 200})
  
      }
  
