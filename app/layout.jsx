@@ -1,4 +1,4 @@
-
+"use client"
 import "@styles/globals.css"
 
 import Nav from "@components/Nav"
@@ -7,7 +7,7 @@ import Provider from "@components/Provider"
 
 
 
-export const metadata = {
+ const metadata = {
 
     title: "Promptopia",
     description: "Discover & Share AI Prompts"
