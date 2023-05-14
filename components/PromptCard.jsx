@@ -5,9 +5,6 @@ import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react"
 
-
-
- 
  
 const PromptCard = ({post, handleTagCLick, handleEdit, handleDelete}) => {
 
@@ -23,8 +20,6 @@ const PromptCard = ({post, handleTagCLick, handleEdit, handleDelete}) => {
 
      setTimeout(()=> setCopied(false), 3000)
     
-
-
    }
 
    const handleUserProfile = async ( userProfile)=>{
@@ -46,10 +41,8 @@ const PromptCard = ({post, handleTagCLick, handleEdit, handleDelete}) => {
 
            <div className="flex flex-col" onClick={(e)=>{
             handleUserProfile(post.creator)
- 
-
-
            }}>
+
             <h3 className="	font-satoshi font-semibold  text-gray-900">{post.creator.username}</h3>
             <p className="font-inter font-sm text-gray-500">{post.creator.email.replace(/^(.{2})[^@]+/, "$1****")}</p>
            </div>
