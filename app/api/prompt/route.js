@@ -1,8 +1,11 @@
 import { connectToDB } from "@utils/database";
+
 import Prompt from "@models/prompt";
+import { NextResponse } from "next/server";
 
 export const  GET = async (req) => {
-    
+
+     const {searchParams} = new URL(req.url);
 
     try{
  
@@ -10,7 +13,9 @@ export const  GET = async (req) => {
 
        const prompts = await Prompt.find({}).populate("creator")
 
-       return new Response(JSON.stringify(prompts),{status: 200})
+       
+       return NextResponse.json(prompts,{status:200});
+
  
      }
  
