@@ -40,7 +40,8 @@ const Feed = () => {
 
     
     fetchPosts();
-  });
+
+  },[posts]);
 
   const filterPrompts = (searchText) =>{
     const regex = new RegExp(searchText, "i");
